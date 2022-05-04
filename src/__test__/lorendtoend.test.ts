@@ -2,7 +2,7 @@ import supertest from 'supertest';
 import app from '../app';
 
 const testpostdata = {
-    CustomerAccountNumber: "1234567",
+CustomerAccountNumber: "1234567",
 CustomerMeterNumber: "34457",
 CustomerDistrict: "abakpa",
 CustomerFeeder: "aba",

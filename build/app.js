@@ -10,7 +10,7 @@ dotenv_1.default.config();
 (0, dbconnection_1.default)();
 const app = (0, server_1.default)();
 //middlewares
-const port = process.env.PORT || 5060;
+const port = process.env.PORT || 5061;
 app.listen(port, () => {
     console.log(`Server is listening on port ${port}`);
 });
