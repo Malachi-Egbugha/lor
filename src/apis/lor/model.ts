@@ -24,7 +24,7 @@ ProcessingDate?: Date;
 ProcessedBy?: string;
 }
 
-const lorSchema = new Schema<lorDocument>({
+const lorSchema = new Schema({
 CustomerAccountNumber: {type: String, required: true},
 CustomerMeterNumber: {type: String, required: true},
 CustomerDistrict: {type: String, required: true},
@@ -53,6 +53,6 @@ ProcessedBy: String,
     timestamps: true,
 
 })
-const lorModel = model<lorDocument>("lor",lorSchema)
+const lorModel = model("lor",lorSchema)
 export default lorModel;
 
