@@ -1,6 +1,6 @@
 import mongoose  from 'mongoose';
 function dbconnect(){
-    return mongoose.connect(process.env.LOCALDATABASE as string,{
+    return mongoose.connect(process.env.PRODDB as string,{
         useNewUrlParser: true,
         useUnifiedTopology: true,
 
