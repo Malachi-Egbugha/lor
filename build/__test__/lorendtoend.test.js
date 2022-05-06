@@ -22,6 +22,7 @@ const testpostdata = {
     Address: "enugu",
     Tariff: "2345",
     Lornumber: "345",
+    DtName: "james",
     Loramount: 500,
     ReconnectionCost: 800,
     LossOfRevenue: 500,
@@ -36,10 +37,16 @@ const testpostdata = {
     Createdby: 14 / 56 / 78,
     ProcessingStatus: "wating"
 };
-describe("test for lor", () => {
-    describe("test for get all lor route", () => {
-        test("should return a 404", () => __awaiter(void 0, void 0, void 0, function* () {
+let lornumber = 1651841092255;
+describe("test for read lor route", () => {
+    describe("test for get all and bylor lor route", () => {
+        test("should return status code 200", () => __awaiter(void 0, void 0, void 0, function* () {
             const response = yield (0, supertest_1.default)(app_1.default).get('/api/v1/lor/readalllor');
+            expect(response.statusCode).toBe(200);
+            expect(response.body.status).toEqual(true);
+        }));
+        test("should return status code 200", () => __awaiter(void 0, void 0, void 0, function* () {
+            const response = yield (0, supertest_1.default)(app_1.default).get(`/api/v1/lor/readalllor/${lornumber}`);
             expect(response.statusCode).toBe(200);
             expect(response.body.status).toEqual(true);
         }));

@@ -16,7 +16,7 @@ export async function createLorHandler(req:Request, res:Response){
 }
 
 export async function readallLorHandler(req: Request, res:Response){
-    let query = {}; 
+    let query = req.params.lornumber?{Lornumber:req.params.lornumber}:{};
     try{
         const queryresult = await readlor(query);
         res.json({queryresult, status:true});
@@ -27,6 +27,7 @@ export async function readallLorHandler(req: Request, res:Response){
     }
 
 }
+
 
 export async function updateLorHandler(req: Request, res:Response){
     let {id} = req.params;

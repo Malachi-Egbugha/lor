@@ -5,7 +5,7 @@ dotenv.config();
 dbconnection();
 const app = createServer();
 //middlewares
-const port = process.env.PORT || 5061;
+const port = process.env.PORT || 5062;
 app.listen(port, () =>{
     console.log(`Server is listening on port ${port}`);
 })

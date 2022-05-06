@@ -25,7 +25,7 @@ function createLorHandler(req, res) {
 exports.createLorHandler = createLorHandler;
 function readallLorHandler(req, res) {
     return __awaiter(this, void 0, void 0, function* () {
-        let query = {};
+        let query = req.params.lornumber ? { Lornumber: req.params.lornumber } : {};
         try {
             const queryresult = yield (0, services_1.readlor)(query);
             res.json({ queryresult, status: true });

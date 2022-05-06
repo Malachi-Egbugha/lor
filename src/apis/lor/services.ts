@@ -2,6 +2,8 @@ import lorModel,{lorDocument} from './model';
 export async function createLor(input: lorDocument){
     try
     {
+        //create lor number
+        input.Lornumber = new Date().valueOf();
         return await lorModel.create(input);
     }
     catch(e:any){
@@ -12,7 +14,6 @@ export async function createLor(input: lorDocument){
 }
 
 export async function readlor(query: any){
-    console.log(query);
     try{
     return await lorModel.find(query).sort({createdAt: -1});
     }
@@ -32,4 +33,6 @@ export async function updatelor(id: any, update:any){
     }
 
 }
+
+
 

@@ -17,6 +17,8 @@ const model_1 = __importDefault(require("./model"));
 function createLor(input) {
     return __awaiter(this, void 0, void 0, function* () {
         try {
+            //create lor number
+            input.Lornumber = new Date().valueOf();
             return yield model_1.default.create(input);
         }
         catch (e) {
@@ -28,7 +30,6 @@ function createLor(input) {
 exports.createLor = createLor;
 function readlor(query) {
     return __awaiter(this, void 0, void 0, function* () {
-        console.log(query);
         try {
             return yield model_1.default.find(query).sort({ createdAt: -1 });
         }

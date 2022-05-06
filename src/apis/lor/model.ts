@@ -6,7 +6,8 @@ CustomerDistrict: string;
 CustomerFeeder: string;
 Address: string;
 Tariff: string;
-Lornumber: string;
+Lornumber: number;
+DtName: string;
 Loramount: number;
 ReconnectionCost: number;
 LossOfRevenue: number;
@@ -31,8 +32,9 @@ CustomerDistrict: {type: String, required: true},
 CustomerFeeder: {type: String, required: true},
 Address: {type: String, required: true},
 Tariff: {type: String, required: true},
-Lornumber: {type: String, required: true},
+Lornumber: {type: Number, required: true},
 Loramount: {type: Number, required: true},
+DtName: {type: String, required: true},
 ReconnectionCost: {type: Number, required: true},
 LossOfRevenue: {type: Number, required: true},
 CostOfDamagedMeter: {type: Number, required: true},
